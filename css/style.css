@@ -42,3 +42,113 @@ header .header-1 .call{
     font-size: 2rem;
     color: #666;
 }
+
+header .header-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--red);
+    padding: .5rem;
+    position: relative;
+    z-index: 1000;
+}
+
+header .header-2 .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .header-2 .navbar ul li{
+    margin: 1rem;
+}
+
+header .header-2 .navbar ul li a{
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .header-2 .navbar ul li a:active,
+header .header-2 .navbar ul li a:hover{
+    color: #ff0;
+}
+
+header .header-2 .share a{
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem;
+}
+
+header .header-2 .share a:hover{
+    color: #ff0;
+}
+
+header .header-2 #menu{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    margin: 1rem;
+}
+
+/* media queries */
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header .header-2 #menu{
+        display: block;
+    }
+
+    header .header-2 .navbar{
+        position: absolute;
+        top: 100%;
+        left: -120%;
+    }
+
+    header .header-2 .navbar ul{
+        flex-flow: column;
+        justify-content: center;
+        min-height: calc(100vh - 6rem);
+        padding-bottom: 6rem;
+        background: #000;
+        width: 32rem;
+    }
+
+    header .header-2 .navbar ul li{
+        width: 100%;
+        text-align: center;
+    }
+
+    header .header-2 .navbar ul li a{
+        font-size: 2.7rem;
+        display: block;
+    }
+
+    header .header-2 .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .header-2 .nav-toggle{
+        left: 0;
+    }
+}
+
+@media (max-width:400px){
+
+    header .header-1{
+        flex-flow: column;
+    }
+
+    header .header-1 .logo{
+        padding-bottom: 1rem;
+    }
+
+    header .header-2 .navbar ul{
+        width: 100vw;
+    }
+}
