@@ -27,30 +27,30 @@ html{
 .btn{
     height: 4.5rem;
     width: 18rem;
-    color: #ff0;
+    color: var(--red);
     border: .2rem solid #fff;
     outline: .2rem solid #fff;
     outline-offset: -.8rem;
     font-size: 2rem;
     margin: 1.5rem 0;
     cursor: pointer;
-    background: none;
+    background: #ff0;
 }
 
 .btn:hover{
     outline-offset: .4rem;
     background: var(--red);
     height: 4.5rem;
-    color: #fff;
+    color: #ff0;
 }
 
-/* .heading{
+.heading{
     text-align: center;
     width: 90%;
     margin: 0 auto;
     padding: 0 .5rem;
     padding-top: 6rem;
-    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
+    box-shadow: 0 .2rem .05rem rgba(0, 0, 0, .3);
 }
 
 .heading span{
@@ -58,8 +58,8 @@ html{
     font-size: 3.5rem;
     color: var(--red);
     padding: 1rem 0;
-    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
-} */
+    box-shadow: 0 .2rem .05rem var(--red);
+}
 
 header .header-1{
     display: flex;
@@ -130,6 +130,13 @@ header .header-2 #menu{
     margin: 1rem;
 }
 
+header .header-2.header-active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+}
+
 .home{
     display: flex;
     align-items: center;
@@ -181,12 +188,51 @@ header .header-2 #menu{
         background-position-x: -350rem;
     }
 }
-/* 
+
 .about{
     min-height: 100vh;
 
-} */
+}
 
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    overflow-x: hidden;
+}
+
+.about .row .image img{
+    width: 30vw;
+    filter: drop-shadow(.5rem .5rem .5rem rgba(0,0,0,.5));
+}
+
+.about .row .content{
+    padding: 1rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+    color: var(--red);
+}
+
+.about .row .content p{
+    font-size: 2rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.about .row .content .btn{
+    color: #fff;
+    border-color: var(--red);
+    outline-color: #fff;
+    background-color: var(--red);
+}
+
+.about .row .content .btn:hover{
+    color: #fff;
+    outline-color: var(--red);
+}
 
 
 
@@ -256,6 +302,14 @@ header .header-2 #menu{
 
     .home .content p{
         width: auto;
+    }
+
+    .about .row{
+        flex-flow: column;
+    }
+
+    .about .row .image img{
+        width: 85%;
     }
 }
 
