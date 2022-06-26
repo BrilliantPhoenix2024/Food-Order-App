@@ -24,6 +24,43 @@ html{
     overflow-x: hidden;
 }
 
+.btn{
+    height: 4.5rem;
+    width: 18rem;
+    color: #ff0;
+    border: .2rem solid #fff;
+    outline: .2rem solid #fff;
+    outline-offset: -.8rem;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    outline-offset: .4rem;
+    background: var(--red);
+    height: 4.5rem;
+    color: #fff;
+}
+
+/* .heading{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    padding-top: 6rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
+}
+
+.heading span{
+    display: inline-block;
+    font-size: 3.5rem;
+    color: var(--red);
+    padding: 1rem 0;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
+} */
+
 header .header-1{
     display: flex;
     align-items: center;
@@ -93,6 +130,82 @@ header .header-2 #menu{
     margin: 1rem;
 }
 
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(../images/bg1.jpeg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.home .content{
+    text-align: center;
+    padding: 1rem;
+}
+
+.home .content h1{
+    font-size: 6rem;
+    color: #ff0;
+}
+
+.home .content h1 span{
+    color: var(--red);
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: #fff;
+    width: 68rem;
+    padding: 1rem 0;
+}
+
+.home .shape{
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    height: 13rem;
+    background: url(../images/shape-bottom.png);
+    background-size: 350rem 13rem;
+    width: 100%;
+    animation: animate 25s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+
+    100%{
+        background-position-x: -350rem;
+    }
+}
+/* 
+.about{
+    min-height: 100vh;
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media queries */
 @media (max-width:768px){
 
@@ -136,9 +249,21 @@ header .header-2 #menu{
     header .header-2 .nav-toggle{
         left: 0;
     }
+
+    .home .content h1{
+        font-size: 5rem;
+    }
+
+    .home .content p{
+        width: auto;
+    }
 }
 
 @media (max-width:400px){
+
+    html{
+        font-size: 50%;
+    }
 
     header .header-1{
         flex-flow: column;
